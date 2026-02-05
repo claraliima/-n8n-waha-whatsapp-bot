@@ -1,16 +1,26 @@
-# -n8n-waha-whatsapp-bot
-## 🔧 Estrutura do Fluxo
-O fluxo foi desenvolvido no n8n e é composto pelos seguintes nós principais:
+🤖 n8n-waha-whatsapp-bot
+------------------------
 
-### Webhook
-Responsável por receber os eventos de mensagens do WhatsApp enviados pelo Waha.
+Este projeto implementa um agente de IA integrado ao WhatsApp, desenvolvido com n8n e Waha, com o objetivo de ajudar usuários a decidir qual presente dar para a Clara.
 
-### Switch Node
-Utilizado para validar o tipo de evento recebido e garantir que apenas mensagens sejam processadas pelo fluxo.
+O agente conversa de forma interativa, faz perguntas simples e considera as respostas ao longo do diálogo. Para manter o contexto entre mensagens, o fluxo utiliza memória persistente com Redis, permitindo recomendações mais consistentes durante a conversa.
 
-### Send Seen
-Marca a mensagem como visualizada no WhatsApp, melhorando a experiência do usuário final.
+A automação explora, na prática, conceitos como IA aplicada a fluxos conversacionais, controle de eventos do WhatsApp e organização de automações no n8n. O projeto foi desenvolvido com foco em aprendizado e portfólio, servindo como um experimento real de integração entre automação e inteligência artificial.
 
-### AI Agent + Redis Memory
-Responsável por gerar respostas utilizando um modelo de IA, mantendo o contexto da conversa através de memória persistente no Redis.
+🔧 Principais componentes do fluxo
+----------------------------------
 
+- Webhook – Receber mensagem
+  Recebe os eventos de mensagens do WhatsApp enviados pelo Waha via HTTP.
+
+- Filtro – Ignorar mensagens de grupo
+  Garante que o bot responda apenas mensagens de conversas individuais.
+
+- Switch – Validar evento como mensagem
+  Filtra os eventos recebidos, permitindo que apenas mensagens sigam para o processamento.
+
+- Agente de IA + Redis
+  Gera respostas utilizando um modelo de linguagem, mantendo o contexto da conversa por meio de memória persistente no Redis.
+
+- WhatsApp – Marcar como visualizado / Enviar mensagem
+  Marca a mensagem como visualizada e envia a resposta gerada pelo agente ao usuário.
