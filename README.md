@@ -1,2 +1,16 @@
 # -n8n-waha-whatsapp-bot
-Fluxo de automação no n8n integrado ao Waha para WhatsApp, utilizando um Agente de IA com memória em Redis para manter contexto conversacional. O agente tem como objetivo auxiliar e instruir usuários na escolha do presente ideal para a Clara, considerando preferências e histórico da conversa.
+## 🔧 Estrutura do Fluxo
+O fluxo foi desenvolvido no n8n e é composto pelos seguintes nós principais:
+
+### Webhook
+Responsável por receber os eventos de mensagens do WhatsApp enviados pelo Waha.
+
+### Switch Node
+Utilizado para validar o tipo de evento recebido e garantir que apenas mensagens sejam processadas pelo fluxo.
+
+### Send Seen
+Marca a mensagem como visualizada no WhatsApp, melhorando a experiência do usuário final.
+
+### AI Agent + Redis Memory
+Responsável por gerar respostas utilizando um modelo de IA, mantendo o contexto da conversa através de memória persistente no Redis.
+
