@@ -1,4 +1,4 @@
-🤖 n8n-waha-whatsapp-bot
+n8n-waha-whatsapp-bot
 ------------------------
 
 Este projeto implementa um agente de IA integrado ao WhatsApp, desenvolvido com n8n e Waha, com o objetivo de ajudar usuários a decidir qual presente dar para a Clara.
@@ -7,7 +7,7 @@ O agente conversa de forma interativa, faz perguntas simples e considera as resp
 
 A automação explora, na prática, conceitos como IA aplicada a fluxos conversacionais, controle de eventos do WhatsApp e organização de automações no n8n. O projeto foi desenvolvido com foco em aprendizado e portfólio, servindo como um experimento real de integração entre automação e inteligência artificial.
 
-🔧 Principais componentes do fluxo
+ Principais componentes do fluxo
 ----------------------------------
 
 - Webhook – Receber mensagem
